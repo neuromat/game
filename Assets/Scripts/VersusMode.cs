@@ -1,10 +1,10 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class VersusMode : MonoBehaviour 
 {
 	public UIManager ui;
-	public NewProbCalculator probs;
+	public ProbCalculator probs;
 	
 	static private VersusMode _instance;
 	static public VersusMode instance

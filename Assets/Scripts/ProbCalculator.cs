@@ -1,44 +1,45 @@
-﻿using UnityEngine;
+
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using JsonFx.Json;
 using System.IO;
 
-public class TreeCell
+public class StateMachine
 {
-	public float probEvent0;
-	public TreeCell right;
-	public TreeCell left;
-	public string label;
-	public int id;
-			
-	public TreeCell ()
-	{
-		right = left = null;
-	}
-}
+	public string id;
 
-[System.Serializable]
-public class HeapCell
-{
-	public bool useThisNode;
-	public float probEvent0;
-	public string label;
+	public int choices;
+
+	public int depth;
 	
-	public HeapCell (float prob, string lbl)
+	public string alphabet;
+	
+	public int limitValue;
+	
+	public Dictionary<string, JsonStateInput> states;
+	
+	public List<string> dicKeys;
+	
+	public StateMachine()
 	{
-		probEvent0 = prob;
-		label = lbl;
+		states = new Dictionary<string, JsonStateInput> ();
+		dicKeys = new List<string> ();
 	}
 }
 
 public class ProbCalculator : MonoBehaviour 
 {
-	public List <HeapCell> treeInput;
+	static List<StateMachine> machines = new List<StateMachine> ();
+	
+	int currentStateMachineIndex;
+	
+	JsonStateInput currentState;
+	
+	List<string> transitionHistory = new List<string> ();
 
-	private TreeCell tree;
-	private TreeCell currentState;
+	private string logString = "";
 	
 	static private ProbCalculator _instance;
 	static public ProbCalculator instance
@@ -51,170 +52,254 @@ public class ProbCalculator : MonoBehaviour
 			}
 			
 			return _instance;
-		}
+		}	
 	}
 	
-	JsonTreeNode LoadJson()
+	string [] files = new string[] {
+		"tree1",
+		"tree2",
+		"tree3",
+		"tree4",
+		"tree5",
+		"tree6"
+	};
+
+	public string CurrentMachineID()
 	{
-		FileInfo theSourceFile = null;
-		StreamReader reader = null;
-		
-		theSourceFile = new FileInfo (Application.dataPath + "/Trees/tree.txt");
-		if ( theSourceFile != null && theSourceFile.Exists )
-			reader = theSourceFile.OpenText();
-		
-		string json = "";
-		if ( reader == null )
+		return machines [currentStateMachineIndex].id;
+	}
+
+	StateMachine LoadJson(string file)
+	{
+
+		var tree = Resources.Load("Trees/"+file) as TextAsset;
+		if(tree == null)
 		{
-			Debug.Log("puzzles.txt not found or not readable");
+			return null;
 		}
-		else
+	
+		
+//		FileInfo theSourceFile = null;
+//		StreamReader reader = null;
+//		
+		GameObject debugLoadedTrees = GameObject.FindGameObjectWithTag("debugLoadedTrees");
+		if(debugLoadedTrees != null)
 		{
-			// Read each line from the file
-			string txt;
-			while ( (txt = reader.ReadLine()) != null )
-			{
-				json += txt;
-				Debug.Log("-->" + txt);
-			}
+			if(tree != null)
+				debugLoadedTrees.GetComponent<Text>().text += "Loaded: "+file+ "\n";
+			else
+				debugLoadedTrees.GetComponent<Text>().text += "Could not load: "+file+ "\n";
 		}
 		
+		string json = tree.text;
 		print (json);
 		
-		JsonTreeNode t = null;
+		JsonInput input = null;
 		if(json != "")
-			t = JsonReader.Deserialize<JsonTreeNode> (json);
+			input = JsonReader.Deserialize<JsonInput> (json);
 		
-		return t;
+		StateMachine s = new StateMachine ();
+		s.choices = input.GetChoices();
+		s.depth = input.GetDepth();
+		s.limitValue = input.GetLimitValue();
+		s.id = input.id;
+		foreach(JsonStateInput i in input.states)
+		{
+			print (i.path);
+			s.dicKeys.Add(i.path);
+			s.states[i.path] = i;
+		}
+		
+		return s;
 	}
 	
-	void CreateTreeFromJson (TreeCell t, JsonTreeNode j)
-	{
-		if(j == null)
-		{
-			return;
-		}
-		
-		t.label = j.label;
-		t.probEvent0 = j.GetProbEvent0();
-		t.id = j.GetId();
-		
-		if(j.right != null)
-		{
-			TreeCell tmp = new TreeCell ();
-			CreateTreeFromJson(tmp, j.right);
-			t.right = tmp;
-		}
-		if(j.left != null)
-		{
-			TreeCell tmp = new TreeCell ();
-			CreateTreeFromJson(tmp, j.left);
-			t.left = tmp;
-		}
-		
-	}
-	
-	void CreateTreeFromHeapInput(TreeCell t, int inputIndex)
-	{
-		if(inputIndex > treeInput.Count || !treeInput[inputIndex].useThisNode)
-		{
-			return;
-		}
-		
-		t.label = treeInput[inputIndex].label;
-		t.probEvent0 = treeInput[inputIndex].probEvent0;
-		t.id = inputIndex;
-		
-		int i = 2 * inputIndex + 1;
-		if(i < treeInput.Count && treeInput[i].useThisNode)
-		{
-			TreeCell tmp = new TreeCell ();
-			CreateTreeFromHeapInput(tmp, i);
-			t.right = tmp;
-		}
-		i = 2 * inputIndex + 2;
-		if(i < treeInput.Count && treeInput[i].useThisNode)
-		{
-			TreeCell tmp = new TreeCell ();
-			CreateTreeFromHeapInput(tmp, i);
-			t.left = tmp;
-		}
-	}
-
-	void PrintTree(TreeCell t)
-	{
-		if(t != null)
-		{
-			print(t.id + " "  + t.label + " " + t.probEvent0);
-			
-			PrintTree(t.right);
-			PrintTree(t.left);
-		}
-	}
-	
-	void Start () 
-	{
-		tree = new TreeCell();
-		currentState = tree;
-		
-		Text treeSource = GameObject.Find("TreeSource").GetComponent<Text>();
-		
-		JsonTreeNode t = LoadJson();
-		if(t != null)
-		{
-			CreateTreeFromJson(tree, t);
-			treeSource.text = "Recursos carregados do arquivo";
-		}
-		else
-		{
-			CreateTreeFromHeapInput(tree, 0);
-			treeSource.text = "Recursos carregados do programa";
-		}
-			
-		PrintTree(tree);
-		print ("Tree loaded");
-	}
-	
-	public int GetCurrentStateId()
-	{
-		return currentState.id;
-	}
-
-	public TreeCell GetCurrentState()
-	{
-		return currentState;
-	}
-	
-	// This returns a random value for a current state and advances to the next
-	public int GetEvent ()
+	int TwoChoices()
 	{
 		float r  = Random.Range(0.0f, 1.0f);
 		
-		int result = 0;
+		string result = "0";
 		
-		if(r > currentState.probEvent0)
+		if(r > currentState.GetProbEvent0())
 		{
-			result = 1;
-			if(currentState.left != null)
-				currentState = currentState.left;
-			else
-				currentState = tree;
-		}
-		else
-		{
-			if(currentState.right != null)
-				currentState = currentState.right;
-			else
-				currentState = tree;
+			result = "1";
 		}
 		
-		return result;
+		string bkpResult = result;
+		
+		int i = -1;
+		
+		if(transitionHistory.Count == 0)
+		{
+			for(int j = 0; j < currentState.path.Length; j++)
+			{
+				transitionHistory.Insert(0, currentState.path[j].ToString());
+			}
+		}
+		
+		while(i < machines[currentStateMachineIndex].depth)
+		{
+			if (i >= 0)
+				result = transitionHistory[i] + result;
+			i++;
+			if(machines[currentStateMachineIndex].states.ContainsKey(result))
+			{
+				currentState = machines[currentStateMachineIndex].states[result];
+				break;
+			}
+		}
+		
+		transitionHistory.Insert(0, bkpResult);
+		
+		return System.Convert.ToInt16(bkpResult);
 	}
 	
-
-	
-	void Update () 
+	int ThreeCoices()
 	{
+		float r  = Random.Range(0.0f, 1.0f);
+		
+		string result = "0";
+		
+		if(r > currentState.GetProbEvent0() && r < currentState.GetProbEvent0() + currentState.GetProbEvent1())
+		{
+			result = "1";
+		}
+		else if(r >= currentState.GetProbEvent0() + currentState.GetProbEvent1())
+		{
+			result = "2";
+		}
+		
+		string bkpResult = result;
+		
+		int i = -1;
+		
+		if(transitionHistory.Count == 0)
+		{
+			for(int j = 0; j < currentState.path.Length; j++)
+			{
+				transitionHistory.Insert(0, currentState.path[j].ToString());
+			}
+		}
+		logString += " estado anterior: " + currentState.path;
+		while(i < machines[currentStateMachineIndex].depth)
+		{
+			if (i >= 0)
+				result = transitionHistory[i] + result;
+			i++;
+			if(machines[currentStateMachineIndex].states.ContainsKey(result))
+			{
+				currentState = machines[currentStateMachineIndex].states[result];
+				break;
+			}
+		}
+
+		logString += " estado atual: "+currentState.path+" resultado: "+ bkpResult+"\n";
+
+		print (logString);
+
+		transitionHistory.Insert(0, bkpResult);
+		
+		return System.Convert.ToInt16(bkpResult);
+	}
+	
+	public int GetEvent ()
+	{
+		if(machines[currentStateMachineIndex].choices == 2)
+		{
+			return TwoChoices();
+		}
+		else if(machines[currentStateMachineIndex].choices == 3)
+		{
+			return ThreeCoices();
+		}
+		
+		return 0;
+	}
+
+	public void GotoNextMachine()
+	{
+		currentStateMachineIndex ++;
+	}
+
+	public void ResetToInitialMachine()
+	{
+		currentStateMachineIndex = 0;
+	}
+
+	public bool CanGoToNextMachine()
+	{
+		print (currentStateMachineIndex + " " + machines.Count);
+		if(currentStateMachineIndex < machines.Count-1)
+		{
+			return true;
+		}
+		
+		return false;
+		
+	}
+
+	public bool GoToNextMachine()
+	{
+		if(currentStateMachineIndex < machines.Count)
+		{
+			currentStateMachineIndex ++;
+			return true;
+		}
+		
+		return false;
+	}
+
+	void SetInitState(JsonInput t)
+	{
+		int max = t.states.Length;
+		
+		int r = Random.Range(0, max);
+		
+		currentState = t.states[r];
+	}
+	
+	static bool inited = false;	
+	// Use this for initialization
+	public void Start () 
+	{
+		currentStateMachineIndex = 0;
+		StateMachine tmp;
+		if(!inited)
+		{
+			foreach(string s in files)
+			{
+				tmp = LoadJson(s);
+				if(tmp != null)
+				{
+					machines.Add(tmp);
+				}
+
+			}
+			inited = true;
+		}
+		
+		int max = machines[currentStateMachineIndex].states.Count;
+		
+		int index = Random.Range(0, max);
+		
+		string key = machines[currentStateMachineIndex].dicKeys[index];
+		
+		currentState = machines[currentStateMachineIndex].states[key];
+	}
+	
+	public float GetCurrentLimitValue()
+	{
+		return (float)machines[currentStateMachineIndex].limitValue;
+	}
+
+	public int GetCurrMachineIndex()
+	{
+		return currentStateMachineIndex;
+	}
+
+//	public float
+	
+	// Update is called once per frame
+	void Update () {
 	
 	}
 }

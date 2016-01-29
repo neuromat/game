@@ -39,7 +39,7 @@ public class UIManager : MonoBehaviour
 	public List<GameObject> optBtns;
 
 	private float stopwatch;
-	private NewProbCalculator probs;
+	private ProbCalculator probs;
 	private int eventCount = 0;
 	private int success = 0;
 	private List<RandomEvent> _events = new List<RandomEvent> ();
@@ -278,7 +278,7 @@ public class UIManager : MonoBehaviour
 	int currentState;
 	void Start () 
 	{
-		probs = NewProbCalculator.instance;
+		probs = ProbCalculator.instance;
 		int targetAnim = probs.GetCurrMachineIndex ();
 		if(targetAnim >= gkAnim.Length)
 		{

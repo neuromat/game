@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -12,7 +12,7 @@ public class ProgressionBar : MonoBehaviour
 	private float currTarget = .1f;
 	private float currBaseValue = .1f;
 	private float barFactor;
-	private NewProbCalculator probCalculator;
+	private ProbCalculator probCalculator;
 	
 	public void SetInitialValue (float v)
 	{
@@ -39,7 +39,7 @@ public class ProgressionBar : MonoBehaviour
 	void Start () 
 	{
 		fill.fillAmount = initialValue;	
-		probCalculator = NewProbCalculator.instance;
+		probCalculator = ProbCalculator.instance;
 	}
 	
 	// Update is called once per frame

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
@@ -20,7 +20,7 @@ public class GameFlowManager : MonoBehaviour
 	public GameObject quitGameMenu;
 	public int playLimit = 0;
 
-	private NewProbCalculator probCalculator;
+	private ProbCalculator probCalculator;
 	private UIManager uiManager;
 	private UIManager uiManagerVersusMode;
 	private bool barCalculated = false;
@@ -111,7 +111,7 @@ public class GameFlowManager : MonoBehaviour
 	
 	void Start () 
 	{
-		probCalculator = NewProbCalculator.instance;
+		probCalculator = ProbCalculator.instance;
 		uiManager = UIManager.instance;
 //		versusModeManager = VersusMode.instance;
 		intro.SetActive(true);
