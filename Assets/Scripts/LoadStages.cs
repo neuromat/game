@@ -1,56 +1,329 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 using System;
 using System.IO;
 
+public delegate void OnLoadPkgExternal(string path);
+public delegate void OnLoadPkgInternal();
+public delegate void OnMenuTimeout();
+
+
 public class LoadStages : MonoBehaviour 
 {
+	List <SourcePath> treeSourcePaths = new List<SourcePath> ();
 
-	public Text text;
+	public GridLayoutGroup g;
+	public GameObject btnPrefab;
+	public Text warning;
+	public OnMenuTimeout OnMenuTimeOutHandler;
+	public OnLoadPkgExternal OnLoadPkgExternalHandler;
+	public OnLoadPkgInternal OnLoadPkgInternalHandler;
+
+
+	public static string [] files = new string[] {
+		"tree1",
+		"tree2",
+		"tree3",
+		"tree4",
+		"tree5",
+		"tree6"
+	};
+
+	void AddSourcePath(string url)
+	{
+		SourceType st;
+		if (url.StartsWith ("http")) 
+		{
+			st = SourceType.web;
+		}
+		else
+		{
+			url = url;
+			st = SourceType.file;
+		}
+
+		SourcePath sp = new SourcePath ();
+		sp.url = url;
+		sp.sourceType = st;
+		treeSourcePaths.Add(sp);
+	}
+
+    void DefaultTreeSourceInit ()
+	{
+		string url;
+		SourceType st;
+		if (Application.dataPath.StartsWith ("http")) 
+		{
+			url = Application.dataPath + "/CustomTrees/";
+			st = SourceType.web;
+		}
+		else
+		{
+			url = "file://"+Application.dataPath + "/CustomTrees/";
+			st = SourceType.file;
+			PlayerPrefs.SetString ("source2", "http://game.numec.prp.usp.br/CustomTrees/");
+		}
+		SourcePath sp = new SourcePath ();
+		sp.url = url;
+		sp.sourceType = st;
+		treeSourcePaths.Add(sp);
+		PlayerPrefs.SetString ("source1", url);
+	}
 
 	// Use this for initialization
 	void Start () 
 	{
-		text.text = Application.dataPath;
-		StartCoroutine (LoadFromURL());
-	}
 
-	IEnumerator LoadFromURL()
-	{
-		string url;// = "file://"+Application.dataPath + "/oi.txt";
-
-		if (Application.dataPath.StartsWith ("http")) 
+		int i = 0;
+		if(warning != null)
 		{
-			url = Application.dataPath + "/oi.txt";
+			warning.text = "";
+		}
+		while(PlayerPrefs.HasKey("source"+(i+1)))
+		{
+			AddSourcePath(PlayerPrefs.GetString("source"+(i+1)));
+			i++;
+		}
+
+		if(i == 0)
+		{
+			DefaultTreeSourceInit();
 		}
 		else
 		{
-			url = "file://"+Application.dataPath + "/oi.txt";
+			if(warning != null)
+			{
+				warning.text = "Carregado das preferencias de usuario:\n";
+			}
 		}
 
+		foreach(SourcePath s in treeSourcePaths)
+		{
+			print(s);
+			StartCoroutine (ReadSource(s.url, s.sourceType));
+		}
+	}
 
-		WWW www = new WWW (url);
-		
+	IEnumerator ReadSource(string url, SourceType st)
+	{
+
+		WWW www = new WWW (url+"index.info");
 		yield return www;
 
-//		StreamReader sr = new StreamReader(
-
-		//string s = www.bytes;
-
-		Debug.Log (www.error);
-
-		Debug.Log(System.Text.Encoding.Default.GetString(www.bytes));
-		if (www.text != null)
+		if(www.error != null && www.error != "")
 		{
-			Debug.Log ("Got smthg! " + www.text);
+			Debug.Log ("url: "+ url + "\nErro: "+www.error);
+			if(warning != null)
+			{
+				warning.text += "url: "+ url + " Status: "+www.error + "\n";
+			}
+		}
+		else
+		{
+			if(warning != null)
+			{
+				warning.text += warning.text = "url: "+ url + " Status: Sucesso\n";
+			}
+
+			if (www.text != null)
+			{
+				count++;
+				string[] files = www.text.Split(';');
+				if(LoadedPackage.packages == null)
+				{
+					LoadedPackage.packages = new Dictionary<string, Package> ();
+				}
+
+
+				foreach(string f in files)
+				{
+					if(g != null)
+					{
+						LoadedPackage.packages[url + f] = new Package(url, f);
+						GameObject go = Instantiate(btnPrefab);
+						go.transform.SetParent(g.transform);
+						go.GetComponentInChildren<Text>().text = f;
+						go.name = f;
+						Button b = go.GetComponent<Button>();
+						
+						AddListener(b, url+f);
+					}
+				}
+			}
+
+		}
+	}
+
+	void AddListener(Button b, string value) 
+	{
+		b.onClick.AddListener(() => LoadTreePackageFromExternalSource(value));
+	}
+
+	IEnumerator LoadExternal(String url)
+	{
+		for (int i = 0; i < files.Length; i++)
+		{
+			WWW www = new WWW (url+"/"+files[i]+".txt");
+			if(warning != null)
+			{
+				warning.text = "carregando " + files[i];
+			}
+			Debug.Log("carregando " + files[i]);
+			yield return www;
+
+			if(www.error != null && www.error != "")
+			{
+				if(warning != null)
+				{
+					warning.text = "Falha ao carregar arquivo " + files[i]+".txt\n" + www.error;
+				}
+			}
+			else
+			{
+				if (www.text != null)
+				{
+					Debug.Log(www.text);
+					LoadedPackage.packages[url].stages.Add(www.text);
+				}				
+			}
+
 		}
 
-		text.text += "\n" + System.Text.Encoding.Default.GetString (www.bytes) + "\n" + www.error + "\n" + www.text;
+		LoadedPackage.loaded = LoadedPackage.packages [url];
+		if(warning != null)
+		{
+			warning.text = "Fases carregadas com sucesso de "+ LoadedPackage.packages[url].name;
+		}
+
+		if (OnLoadPkgExternalHandler == null)
+			StartCoroutine(MiscUtils.WaitAndLoadLevel("MainScene", 3));
+		else
+			OnLoadPkgExternalHandler(url);
 	}
+
+	public void LoadTreePackageFromExternalSource(string path)
+	{
+		StartCoroutine(LoadExternal (path));
+	}
+
+	public void LoadDefaultPackage()
+	{
+		LoadTreePackageFromResources ();
+
+		if(warning != null)
+		{
+			warning.text = "Fases carregadas com sucesso de Pacote de fases padrao";
+		}
+
+		if (OnLoadPkgInternalHandler == null)
+			StartCoroutine(MiscUtils.WaitAndLoadLevel("MainScene", 1));
+		else
+			OnLoadPkgInternalHandler();
+	}
+
+	static public void LoadTreePackageFromResources ()
+	{
+		Package pkg;
+		if (LoadedPackage.packages == null || !LoadedPackage.packages.ContainsKey ("Resources/default"))
+		{
+			LoadedPackage.packages = new Dictionary<string, Package>();
+			pkg = new Package ("Resources", "default");
+		}
+		else 
+		{
+			pkg = LoadedPackage.packages ["Resources/default"];
+		}
+
+		foreach (string file in files) 
+		{
+			var tree = Resources.Load("Trees/"+file) as TextAsset;
+			if(tree == null)
+			{
+				print("erro");
+				return;
+			}
+			
+			GameObject debugLoadedTrees = GameObject.FindGameObjectWithTag("debugLoadedTrees");
+			if(debugLoadedTrees != null)
+			{
+				if(tree != null)
+					debugLoadedTrees.GetComponent<Text>().text += "Loaded: "+file+ "\n";
+				else
+					debugLoadedTrees.GetComponent<Text>().text += "Could not load: "+file+ "\n";
+			}
+			
+			string json = tree.text;
+			pkg.stages.Add(json);
+		}
+
+		LoadedPackage.loaded = pkg;
+	}
+
+	public void ClearPlayerPrefs ()
+	{
+		PlayerPrefs.DeleteAll();
+		Application.LoadLevel(Application.loadedLevel);
+	}
+
+	private int count = 0;
+	private float timeOut = 5;
+	private bool loadedSources = false;
 	// Update is called once per frame
 	void Update () 
 	{
-	
+		if (timeOut > 0) 
+		{
+			timeOut -= Time.deltaTime;
+		}
+
+		if (timeOut < 0) 
+		{
+			if(warning != null)
+			{
+				warning.text = "Nenhum pacote customizado encontrado, continuando com pacote de fases padrão.";
+			}
+			if(OnMenuTimeOutHandler == null)
+				StartCoroutine(MiscUtils.WaitAndLoadLevel("MainScene", 1));
+			else
+				OnMenuTimeOutHandler();
+		}
+
+		if(!loadedSources && count != 0)
+		{
+			print ("carregou tudo");
+			loadedSources = true;
+			timeOut = 0;
+		}
 	}
 }
+
+public class Package
+{
+	public string path;
+	public string name;
+
+	public Package (string _path, string _name)
+	{
+		path = _path;
+		name = _name;
+		stages = new List<string> ();
+	}
+	
+	public List<string> stages;
+}
+
+public static class LoadedPackage
+{
+	public static Dictionary<string,Package> packages;
+	public static Package loaded;
+}
+
+public struct SourcePath
+{
+	public string url;
+	public SourceType sourceType;
+}
+
+public enum SourceType {web, file};

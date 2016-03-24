@@ -54,45 +54,17 @@ public class ProbCalculator : MonoBehaviour
 			return _instance;
 		}	
 	}
-	
-	string [] files = new string[] {
-		"tree1",
-		"tree2",
-		"tree3",
-		"tree4",
-		"tree5",
-		"tree6"
-	};
 
 	public string CurrentMachineID()
 	{
 		return machines [currentStateMachineIndex].id;
 	}
 
-	StateMachine LoadJson(string file)
+	StateMachine LoadJson(string json)
 	{
 
-		var tree = Resources.Load("Trees/"+file) as TextAsset;
-		if(tree == null)
-		{
-			return null;
-		}
-	
-		
-//		FileInfo theSourceFile = null;
-//		StreamReader reader = null;
-//		
-		GameObject debugLoadedTrees = GameObject.FindGameObjectWithTag("debugLoadedTrees");
-		if(debugLoadedTrees != null)
-		{
-			if(tree != null)
-				debugLoadedTrees.GetComponent<Text>().text += "Loaded: "+file+ "\n";
-			else
-				debugLoadedTrees.GetComponent<Text>().text += "Could not load: "+file+ "\n";
-		}
-		
-		string json = tree.text;
-		print (json);
+
+
 		
 		JsonInput input = null;
 		if(json != "")
@@ -265,7 +237,10 @@ public class ProbCalculator : MonoBehaviour
 		StateMachine tmp;
 		if(!inited)
 		{
-			foreach(string s in files)
+			if(LoadedPackage.loaded == null)
+				LoadStages.LoadTreePackageFromResources();
+
+			foreach(string s in LoadedPackage.loaded.stages)
 			{
 				tmp = LoadJson(s);
 				if(tmp != null)
