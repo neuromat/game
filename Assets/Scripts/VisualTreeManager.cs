@@ -7,8 +7,6 @@ public class VisualTreeManager : MonoBehaviour
 {
 	public GameObject treeRoot;
 
-
-	//List<GameObject>
 	private void InitTree(Transform go)
 	{
 		VisualTreeNode node = go.GetComponent<VisualTreeNode>();

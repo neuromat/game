@@ -23,6 +23,7 @@ public class TreeBuilderController : MonoBehaviour
 	public VisualTreeManager tree;
 	public GameObject menu;
 	public GameObject defaultButton;
+	public InputField playLimit;
 
 	private int selectedTreeIndex = 0;
 
@@ -151,6 +152,7 @@ public class TreeBuilderController : MonoBehaviour
 		stateMachine.choices = (3).ToString();
 		stateMachine.limitValue = (80).ToString();
 		stateMachine.states = states.ToArray();
+		stateMachine.limitPlays = playLimit.text;
 
 		currTreeStateMachine = stateMachine;
 	}
@@ -189,6 +191,7 @@ public class TreeBuilderController : MonoBehaviour
 		stateMachine.choices = (3).ToString();
 		stateMachine.limitValue = (80).ToString();
 		stateMachine.states = states.ToArray();
+		stateMachine.limitPlays = playLimit.text;
 
 		string json = JsonWriter.Serialize(stateMachine);
 	    LoadedPackage.packages[loadedPackKey].stages[selectedIndex] = json;
@@ -219,7 +222,11 @@ public class TreeBuilderController : MonoBehaviour
 	}
 
 	void LoadTree (JsonInput stateMachine)
-	{
+	{	
+		if(stateMachine.limitPlays != null)
+		{
+			playLimit.text = stateMachine.limitPlays;
+		}
 		foreach(JsonStateInput s in stateMachine.states)
 		{
 			SetTree(s.path, new double[]{Convert.ToDouble(s.probEvent0), Convert.ToDouble(s.probEvent1)}, tree.treeRoot.GetComponent<VisualTreeNode>());

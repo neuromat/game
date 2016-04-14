@@ -1,4 +1,11 @@
-﻿using System;
+﻿/************************************************************************************/
+//  Module written by scaroni <renato.scaroni@gmail.com>
+//
+//	Deprecated Module. Used for abstraction when dealing with 2 option probability
+//	tree
+/************************************************************************************/
+
+using System;
 
 public class JsonTreeNode
 {
@@ -8,6 +15,8 @@ public class JsonTreeNode
 	public string label;
 	public string id;
 	
+
+
 	public int GetId()
 	{
 		return Convert.ToInt16(id);

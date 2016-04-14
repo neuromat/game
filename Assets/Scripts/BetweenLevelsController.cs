@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿/************************************************************************************/
+//  Module written by scaroni <renato.scaroni@gmail.com>
+//
+//	This Module is responsible for loading the screen between levels
+/************************************************************************************/
+
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 

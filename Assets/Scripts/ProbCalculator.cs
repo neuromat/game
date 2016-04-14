@@ -1,3 +1,10 @@
+/************************************************************************************/
+//  Module written by scaroni <renato.scaroni@gmail.com>
+//
+//	This Module is responsible to keep the statemachines loaded through json files 
+//  as well as manage the states and to generate random probabilities associated
+//  with this states
+/************************************************************************************/
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +18,8 @@ public class StateMachine
 	public string id;
 
 	public int choices;
+
+	public int limitPlays;
 
 	public int depth;
 	
@@ -74,6 +83,7 @@ public class ProbCalculator : MonoBehaviour
 		s.choices = input.GetChoices();
 		s.depth = input.GetDepth();
 		s.limitValue = input.GetLimitValue();
+		s.limitPlays = input.GetLimitPlays();
 		s.id = input.id;
 		foreach(JsonStateInput i in input.states)
 		{
@@ -199,14 +209,12 @@ public class ProbCalculator : MonoBehaviour
 
 	public bool CanGoToNextMachine()
 	{
-		print (currentStateMachineIndex + " " + machines.Count);
 		if(currentStateMachineIndex < machines.Count-1)
 		{
 			return true;
 		}
 		
-		return false;
-		
+		return false;	
 	}
 
 	public bool GoToNextMachine()
@@ -218,6 +226,14 @@ public class ProbCalculator : MonoBehaviour
 		}
 		
 		return false;
+	}
+
+	public int GetCurrentPlayLimit()
+	{
+		if(machines[currentStateMachineIndex].limitPlays != null)
+			return (int)machines[currentStateMachineIndex].limitPlays;
+		else
+			return 0;
 	}
 
 	void SetInitState(JsonInput t)

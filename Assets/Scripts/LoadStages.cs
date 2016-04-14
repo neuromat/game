@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/************************************************************************************/
+//  Module written by scaroni <renato.scaroni@gmail.com>
+//
+//	This is the Module responsible for loading external stages from a directory or 
+//	from the web
+/************************************************************************************/
+
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,7 +27,6 @@ public class LoadStages : MonoBehaviour
 	public OnMenuTimeout OnMenuTimeOutHandler;
 	public OnLoadPkgExternal OnLoadPkgExternalHandler;
 	public OnLoadPkgInternal OnLoadPkgInternalHandler;
-
 
 	public static string [] files = new string[] {
 		"tree1",
@@ -63,7 +69,6 @@ public class LoadStages : MonoBehaviour
 		{
 			url = "file://"+Application.dataPath + "/CustomTrees/";
 			st = SourceType.file;
-			PlayerPrefs.SetString ("source2", "http://game.numec.prp.usp.br/CustomTrees/");
 		}
 		SourcePath sp = new SourcePath ();
 		sp.url = url;
@@ -270,7 +275,6 @@ public class LoadStages : MonoBehaviour
 	private int count = 0;
 	private float timeOut = 5;
 	private bool loadedSources = false;
-	// Update is called once per frame
 	void Update () 
 	{
 		if (timeOut > 0) 
@@ -298,6 +302,8 @@ public class LoadStages : MonoBehaviour
 		}
 	}
 }
+
+// Auxiliary classes
 
 public class Package
 {

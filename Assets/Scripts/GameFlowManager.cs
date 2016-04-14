@@ -94,9 +94,11 @@ public class GameFlowManager : MonoBehaviour
 		}
 		if(!onVersusMode)
 		{
-			if(playLimit > 0)
+			print("yay");
+			print(probCalculator.GetCurrentPlayLimit());
+			if(probCalculator.GetCurrentPlayLimit() > 0)
 			{
-				if(playing && uiManager.events.Count >= playLimit)
+				if(playing && uiManager.events.Count >= probCalculator.GetCurrentPlayLimit())
 				{
 					ShowInBetween();
 				}

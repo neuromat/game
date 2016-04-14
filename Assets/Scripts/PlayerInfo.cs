@@ -1,3 +1,9 @@
+/************************************************************************************/
+//  Module written by scaroni <renato.scaroni@gmail.com>
+//
+//	Static class that holds all the info entered in the 
+/************************************************************************************/
+
 using UnityEngine;
 using System.Collections;
 

@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿/************************************************************************************/
+//  Module written by scaroni <renato.scaroni@gmail.com>
+//
+//	Module responsible for making all the http requests
+/************************************************************************************/
+
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System;
@@ -6,7 +12,7 @@ using JsonFx.Json;
 
 public class ServerOperations
 {
-	public static readonly string gameServerLocation = "neurogol.numec.prp.usp.br:8090/";
+	public static readonly string gameServerLocation = "game.numec.prp.usp.br:8090/";
 	public static readonly string webProtocol = "http://";
 	
 	public delegate void LogRegistered (bool success,string response, List<RandomEvent> log, MonoBehaviour mb, string playId);

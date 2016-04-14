@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/************************************************************************************/
+//  Module written by scaroni <renato.scaroni@gmail.com>
+//
+//	This module is responsible for managing the animation state machine for the 
+//	goal animation
+/************************************************************************************/
+
+using UnityEngine;
 using System.Collections;
 
 public class GKAnimController : MonoBehaviour 
@@ -40,10 +47,5 @@ public class GKAnimController : MonoBehaviour
 		print("gkInitState " + gk.GetCurrentAnimatorStateInfo(0).shortNameHash);
 		print("playerInitState " + player.GetCurrentAnimatorStateInfo(0).shortNameHash);
 		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }

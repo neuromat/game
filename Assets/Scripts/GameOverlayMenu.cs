@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿/************************************************************************************/
+//  Module written by scaroni <renato.scaroni@gmail.com>
+//
+//	This Module needs to be looked more closely, apparently needs refactoring
+/************************************************************************************/
+
+using UnityEngine;
 using System.Collections;
 
 public class GameOverlayMenu : MonoBehaviour 

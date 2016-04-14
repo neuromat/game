@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/************************************************************************************/
+//  Module written by scaroni <renato.scaroni@gmail.com>
+//
+//	This module manages the data collection on the log. It initializes the form and
+//	saves the data on the PlayerInfo class for later persistance on remote DB
+/************************************************************************************/
+
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -28,13 +35,9 @@ public class LogUser : MonoBehaviour
 
 	public void DeleteHeaderGenero()
 	{
-//		int index = gender.options.FindIndex((Dropdown.OptionData o)=>{return o.text == "Gênero";});
-//		print (index);
-//			gender.value -= 1;
-//			gender.options.RemoveAt(index);
+
 	}
 
-	// Use this for initialization
 	void Start () 
 	{
 
@@ -74,8 +77,4 @@ public class LogUser : MonoBehaviour
 		destro.value = 0;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

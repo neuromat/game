@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿/************************************************************************************/
+//  Module written by scaroni <renato.scaroni@gmail.com>
+//
+//	A module containing some useful methods. Intended to be used as a static class
+/************************************************************************************/
+
+using UnityEngine;
 using System.Collections;
 
 public class MiscUtils : MonoBehaviour 
@@ -8,17 +14,5 @@ public class MiscUtils : MonoBehaviour
 		yield return new WaitForSeconds(t);
 
 		Application.LoadLevel (level);
-	}
-
-
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }

@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/************************************************************************************/
+//  Module written by scaroni <renato.scaroni@gmail.com>
+//
+//	This Module manages the Level Editor and makes the bridge between the package
+// 	selection screen and the visual tree editor
+/************************************************************************************/
+
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -44,6 +51,7 @@ public class LevelEditorManager : MonoBehaviour
 		packSelector.SetActive (false);
 	}
 
+	// Auxiliary method
 	public void DirectoryCopy(string sourceDirName, string destDirName, bool copySubDirs)
 	{
 		// Get the subdirectories for the specified directory.
@@ -114,7 +122,7 @@ public class LevelEditorManager : MonoBehaviour
 			}
 		}
 	}
-
+	
 	void Start () 
 	{
 		LoadPackSelector();
