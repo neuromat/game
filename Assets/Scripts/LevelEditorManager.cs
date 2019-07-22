@@ -6,6 +6,7 @@
 /************************************************************************************/
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,14 +20,14 @@ public class LevelEditorManager : MonoBehaviour
 	public GameObject btnPrefab;
 	public LoadStages loadStages;
 
-	private Dictionary<string, Button> packs;
+//	private Dictionary<string, Button> packs;
 
 	static private LevelEditorManager _instance;
 	static public LevelEditorManager instance
 	{
 		get
 		{
-			if(_instance = null)
+			if(_instance == null)
 			{
 				_instance = GameObject.Find("LevelEditorManager").GetComponent<LevelEditorManager>();
 			}
@@ -96,9 +97,18 @@ public class LevelEditorManager : MonoBehaviour
 		packSelector.SetActive (true);
 	}
 
+
+	//Josi: ninguém chama esta function
+	public void ToConfigurations ()
+	{
+		//PlayerPrefs.DeleteAll();
+		//Application.LoadLevel("Configurations");
+		SceneManager.LoadScene("Configurations");
+	}
+	
 	public void DeletePackage (string name)
 	{
-		Destroy(packs[name].gameObject);
+//		Destroy(packs[name].gameObject);
 	}
 	
 	public void AddPackage ()
@@ -112,7 +122,6 @@ public class LevelEditorManager : MonoBehaviour
 
 	void AddListeners(Button b, string value) 
 	{
-
 		b.onClick.AddListener(() => LoadTreeBuilder());
 		foreach(Button b2 in b.GetComponentsInChildren<Button>())
 		{
@@ -134,6 +143,26 @@ public class LevelEditorManager : MonoBehaviour
 		loadStages.gameObject.SetActive(true);
 	}
 	
+	public void CloseApp()
+	{
+		//170322 unity3d tem erro ao usar application.Quit
+		//       workaround: http://unity3dtrenches.blogspot.com.br/2015/10/unity-3d-compiled-game-freezes-or.html
+		//Application.Quit ();
+		if (!Application.isEditor) {  //if in the editor, this command would kill unity...
+			if (Application.platform == RuntimePlatform.WebGLPlayer) {
+				Application.OpenURL (PlayerPrefs.GetString ("gameURL"));
+			} else {
+				//171121 not working kill()
+				if ((Application.platform == RuntimePlatform.IPhonePlayer) || 
+					(SystemInfo.deviceModel.Contains("iPad"))) {           //try #IF UNITY_IOS
+					Application.Quit ();     
+				} else {
+					System.Diagnostics.Process.GetCurrentProcess ().Kill (); 
+				}
+			}
+		}
+	}
+
 	void Update () 
 	{
 	

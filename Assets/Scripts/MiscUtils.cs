@@ -5,6 +5,7 @@
 /************************************************************************************/
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class MiscUtils : MonoBehaviour 
@@ -13,6 +14,7 @@ public class MiscUtils : MonoBehaviour
 	{
 		yield return new WaitForSeconds(t);
 
-		Application.LoadLevel (level);
+//		Application.LoadLevel (level);
+		SceneManager.LoadScene(level);
 	}
 }

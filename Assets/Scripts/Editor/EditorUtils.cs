@@ -10,7 +10,7 @@ public class EditorUtils : MonoBehaviour
 	static void ClearPrefs()
 	{
 		PlayerPrefs.DeleteAll();
-		Debug.Log("PlayerPrefs cleared!");
+		//Debug.Log("PlayerPrefs cleared!"); //Josi commented
 	}
 
 	[MenuItem("Tools/Anchors to Corners %[")]

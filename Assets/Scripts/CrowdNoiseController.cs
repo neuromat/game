@@ -54,7 +54,6 @@ public class CrowdNoiseController : MonoBehaviour
 			else
 			{
 				gameObject.SetActive(false);
-				print ("Yololo");
 			}
 		}
 

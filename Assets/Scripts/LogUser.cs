@@ -1,80 +1,219 @@
 ﻿/************************************************************************************/
-//  Module written by scaroni <renato.scaroni@gmail.com>
+// Module written by scaroni <renato.scaroni@gmail.com>
+// Rewrited by Josi Perez <josiperez.neuromat@gmail.com>
 //
-//	This module manages the data collection on the log. It initializes the form and
-//	saves the data on the PlayerInfo class for later persistance on remote DB
+// Disabled when changing screen order: changed by TCLE.cs
+// This module manages the data collection on the log. It initializes the form and
+// saves the data on the PlayerInfo class for later persistance on remote DB
 /************************************************************************************/
 
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI;           //para os toggles
 using System.Collections;
+//using System.Media.Sounds;    //Josi: for SystemSounds (using UnityEditor; vale no editor não em build): https://forum.unity3d.com/threads/beep.180045/
+//using UnityEngine.EventSystems; //Josi: para dar foco no apelido, ver em https://www.reddit.com/r/Unity3D/comments/2nom92/forcing_focus_on_input_field_in_46/
+//using TMPro;                    //171009 textMesh Pro (justified text and many other resources
+
+
 
 public class LogUser : MonoBehaviour 
 {
-	public GameObject gameModeText;
-	public GameObject timeBtn;
-	public GameObject noTimeBtn;
+	public GameObject userData;                //Josi: IntroScene(1)/Canvas/LogBox/MenuGameMode
 	public InputField alias;
-	public InputField age;
-	public Dropdown gender;
-	public Dropdown education;
-	public Dropdown destro;
 
+    //	public InputField age;                 //161205 pedir apenas nome
+	//	public GameObject Gender;              //161205 pedir apenas nome
+	// public Dropdown gender;                 //161205 pedir apenas nome
+	// public Dropdown education;              //161205 pedir apenas nome
+	// public Dropdown destro;
+    //	public string gender;           
+	//	public string education;                //Josi: 161205 pedir apenas nome
+	//	public string destro;                   //Josi: 161205 pedir apenas nome
+
+	public Toggle agree;                        //170829 TCLE concorda 
+	public Toggle notAgree;                     //170830      ou não
+	public ColorBlock agreeOriginalColors;      //170926 guardar as cores originais (qdo user muda de decisao)
+	public ColorBlock notAgreeOriginalColors;   //170926 guardar as cores originais (qdo user muda de decisao)
+
+	public Text obrigaAlias;                   //Josi: para ligar msg apenas se apelido vazio 
+	private GameFlowManager gameFlowManager;   //Josi para continuar o jogo apos preencher dados
+
+	//Josi 170817
+	#if UNITY_ANDROID || UNITY_IOS
+	private TouchScreenKeyboard mobileKeyboard;     
+	#endif
+	public bool isKeyboardOpen = false;           //180220 start keyboard on mobile devices
+
+	private LocalizationManager translate;        //171009 trazer script das rotinas de translation
+
+	//171009 translation
+	public Text preenchaNome;
+	public Text btnJogar;
+	public Text btnJogarPausa;
+	public Text btnMenu;
+	public Text placeholder;
+	public Text tcleHeader;
+	public Text tcleNotAgree;
+	public Text tcleAgree;
+	public Text tcleText;
+
+
+
+	// -----------------------------------------------------------------------------------------------------
+	// Checks if there is anything entered into the input field.
+	public void LockInput(InputField input)	
+	{
+		if (input.text.Trim().Length == 0)  {   
+			obrigaAlias.text = translate.getLocalizedValue ("obrigaAlias"); //171011 necessary fill playerAlias
+			alias.Select();
+			alias.ActivateInputField();
+		}
+	}
+
+
+
+	// -----------------------------------------------------------------------------------------------------
+	// acrescentado um botão Continuar com Pausa, além do Continuar já existente
+	public void startGamePaused(bool startPaused)
+	{
+		//170913 catar o parametro que indica se é para iniciar os jogos com pausa ou não
+		PlayerPrefs.SetInt("startPaused", startPaused?1:0); //menu "Jogar com pausa" selecionado
+		EnterData();
+	}
+
+
+	// -----------------------------------------------------------------------------------------------------
 	public void EnterData()
-	{
-		PlayerInfo.alias = alias.text;
-		PlayerInfo.gender = gender.options[gender.value].text;
-		PlayerInfo.age = age.text;
-		PlayerInfo.education = education.options[education.value].text;
-		PlayerInfo.destro = destro.options[destro.value].text;
-		gameModeText.SetActive (true);
-		timeBtn.SetActive(true);
-		noTimeBtn.SetActive(true);
-		gameObject.SetActive(false);	
+	{   
+		if (alias.text.Trim().Length == 0) {           //to avoid fill with spaces
+			obrigaAlias.text = translate.getLocalizedValue ("obrigaAlias"); //171011 necessary fill playerAlias
+
+			//180220 problem to open keyboard on iOS; navigation vertical on inspector
+			#if UNITY_ANDROID || UNITY_IOS
+			//		if (! isKeyboardOpen) {
+			//			isKeyboardOpen = true;
+			//			mobileKeyboard = TouchScreenKeyboard.Open(alias.text, TouchScreenKeyboardType.Default, false, false, false, false, "");
+			//		}
+			//		if(mobileKeyboard.done == true)	{
+			//			alias.text = mobileKeyboard.text;
+			//			mobileKeyboard = null;
+			//		} else {
+			//			alias.text = mobileKeyboard.text;
+			//		}
+			#else
+			alias.Select();
+			alias.ActivateInputField();
+			#endif
+		} else {
+			//170830 necessary to inform if agree or not in participate of the search
+			if (!(agree.isOn || notAgree.isOn)) {
+				//171011 obrigaAlias.text = "Por favor, informe sua concordância!";  
+				obrigaAlias.text = translate.getLocalizedValue ("obrigaTCLE");
+			} else {
+				PlayerInfo.alias = alias.text;
+				userData.SetActive (false);
+				gameFlowManager.NewGame (PlayerPrefs.GetInt ("gameSelected"));    //Josi: antes havia esta continuidade no onClick Unity, agora passa para ca para poder reclamar do apelido vazio
+			}
+		}
 	}
 
-	public void DeleteHeaderGenero()
-	{
 
-	}
 
+
+	// -----------------------------------------------------------------------------------------------------
 	void Start () 
-	{
+	{   //161205 pedir apenas nome
+		//PlayerInfo.gender = "M";
+		//PlayerInfo.education = "Fundamental Completo";
+		//PlayerInfo.destro = "D";
 
+
+		//171009 declarar a instance para permitir chamar rotinas do outro script
+		translate = LocalizationManager.instance;
+
+		//171009 translate
+		preenchaNome.text = translate.getLocalizedValue ("preenchaNome");
+		btnJogar.text = translate.getLocalizedValue ("btnJogar");
+		btnJogarPausa.text = translate.getLocalizedValue ("btnJogarPausa");
+		btnMenu.text = translate.getLocalizedValue ("btnMenu");
+		placeholder.text = translate.getLocalizedValue ("placeholder");
+		tcleHeader.text = translate.getLocalizedValue ("tcleHeader");
+		tcleNotAgree.text = translate.getLocalizedValue ("tcleNotAgree");
+		tcleAgree.text = translate.getLocalizedValue ("tcleAgree");
+		tcleText.text = translate.getLocalizedValue ("tcle").Replace("\\n","\n");
+
+
+		//Josi: declare GameFlowManager to continue if data filled
+		gameFlowManager = GameFlowManager.instance;
+
+		//170926 salvar as cores originais do toggle concorda/naoConcorda
+		agreeOriginalColors = agree.colors;
+		notAgreeOriginalColors = notAgree.colors;
 	}
 
-	void OnEnable()
-	{
-		if(PlayerInfo.age == "" || PlayerInfo.alias == "" || PlayerInfo.gender == "")
-		{
-			gameModeText.SetActive (false);
-			timeBtn.SetActive(false);
-			noTimeBtn.SetActive(false);
-		}
-		else
-		{
-			gameModeText.SetActive (true);
-			timeBtn.SetActive(true);
-			noTimeBtn.SetActive(true);
-			gameObject.SetActive(false);
-		}
-		
-		gender.options.Clear ();
-		gender.options.Add(new Dropdown.OptionData("Masculino"));
-		gender.options.Add(new Dropdown.OptionData("Feminino"));
-		gender.value = 0;
-		
-		education.options.Clear ();
-		education.options.Add(new Dropdown.OptionData("Fundamental incompleto"));
-		education.options.Add(new Dropdown.OptionData("Fundamental completo"));
-		education.options.Add(new Dropdown.OptionData("Superior incompleto"));
-		education.options.Add(new Dropdown.OptionData("Superior completo"));
-		education.value = 0;
 
-		destro.options.Clear ();
-		destro.options.Add(new Dropdown.OptionData("Destro"));
-		destro.options.Add(new Dropdown.OptionData("Canhoto"));
-		destro.value = 0;
+
+
+	// -----------------------------------------------------------------------------------------------------
+	void Update () {
+		//Josi 170817
+		#if UNITY_ANDROID || UNITY_IOS
+//		if (! isKeyboardOpen) {
+//			isKeyboardOpen = true;
+//			mobileKeyboard = TouchScreenKeyboard.Open(alias.text, TouchScreenKeyboardType.Default, false, false, false, false, "");
+//		}
+//		if(mobileKeyboard.done == true)	{
+//			alias.text = mobileKeyboard.text;
+//			mobileKeyboard = null;
+//		} else {
+//			alias.text = mobileKeyboard.text;
+//		}
+		#else
+		alias.Select();
+		alias.ActivateInputField();
+		#endif
+	}
+
+
+	// -----------------------------------------------------------------------------------------------------
+	//170829 TCLE: setar Concordo/Não concordo; se N, não se podem gravar os resultados!
+	public void tcleOptionChoosed() {
+
+		//170830 save to ask before send to write file in uiManager.SendEventsToServer (if not isOn do not record!)
+		PlayerInfo.agree = agree.isOn;
+
+		//170925 bold selected option and it is necessary to think that user can change again
+		ColorBlock tmp;
+		if (agree.isOn) { 
+			tmp = agreeOriginalColors;
+			tmp.normalColor = tmp.highlightedColor;
+			agree.colors = tmp;  //verde (ok)
+
+			notAgree.colors = notAgreeOriginalColors;
+		} else {
+			tmp = notAgreeOriginalColors;
+			tmp.normalColor = tmp.highlightedColor;
+			notAgree.colors = tmp;  //vermelho (nok)
+
+			agree.colors = agreeOriginalColors;
+		}
+	}
+
+
+
+
+	// -----------------------------------------------------------------------------------------------------
+	void OnEnable()
+	{   
+		if (PlayerInfo.alias == System.String.Empty) {      //170216 Use System.String.Empty instead of "" when dealing with lots of strings;)
+			if (!PlayerPrefs.	HasKey ("gameSelected")) {
+				userData.SetActive (false);
+			} else {
+				userData.SetActive (true);
+			}
+		} else {
+			userData.SetActive (false);
+		}
 	}
 	
 }

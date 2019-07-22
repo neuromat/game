@@ -14,8 +14,8 @@ public class GKAnimController : MonoBehaviour
 	public Animator gk;
 	public Animator player;
 	
-	public float ballDelay = .1f;
-	public float gkDelay = .1f;
+	public float ballDelay = 0.1f;
+	public float gkDelay = 0.1f;
 
 	public void Play(string gkDir, string ballDir)
 	{
@@ -43,9 +43,8 @@ public class GKAnimController : MonoBehaviour
 		ball.enabled = true;
 		gk.enabled = true;
 		player.enabled = true;
-		print("ballInitState " + ball.GetCurrentAnimatorStateInfo(0).shortNameHash);
-		print("gkInitState " + gk.GetCurrentAnimatorStateInfo(0).shortNameHash);
-		print("playerInitState " + player.GetCurrentAnimatorStateInfo(0).shortNameHash);
-		
+		// print("ballInitState " + ball.GetCurrentAnimatorStateInfo(0).shortNameHash);
+		// print("gkInitState " + gk.GetCurrentAnimatorStateInfo(0).shortNameHash);
+		// print("playerInitState " + player.GetCurrentAnimatorStateInfo(0).shortNameHash);		
 	}
 }

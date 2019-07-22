@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/************************************************************************************/
+// Module written by scaroni <renato.scaroni@gmail.com>
+// 
+/************************************************************************************/
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 

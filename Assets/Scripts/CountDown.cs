@@ -19,7 +19,8 @@ public class CountDown : MonoBehaviour
 	
 	void OnEnable()
 	{
-		txt.text = time.ToString();;
+		time = 3;
+		txt.text = time.ToString();
 	}
 	
 	// Use this for initialization

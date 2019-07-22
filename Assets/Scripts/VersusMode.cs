@@ -1,3 +1,7 @@
+/************************************************************************************/
+// Module written by scaroni <renato.scaroni@gmail.com>
+// 
+/************************************************************************************/
 using UnityEngine;
 using System.Collections;
 
@@ -27,8 +31,10 @@ public class VersusMode : MonoBehaviour
 			probs.gameObject.SetActive(true);
 			probs.Start();
 		}
-		int e = probs.GetEvent();
-		print ("Resultado "+ e);
+		int e = probs.GetEvent(0);  //170130 apenas para compilar; acrescentado param para atender ao Jogo da Memoria (5) e 
+		//       comparar input com correto e avancar ou nao no MDIndex; nao vale nos demais jogos;
+		//*      170216 o param false equivale a saber se o jogo está na phaseZero do JG
+		//Debug.Log("Resultado "+ e); //170915
 		string gkMove = "";
 				
 		if(e == 0) //esquerda
