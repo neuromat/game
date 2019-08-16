@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="190614-JG-EEG.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets/CustomTrees" t="Include">
+        <e p="Diamante" t="Include">
+          <e p="tree1.txt" t="Include" />
+          <e p="tree2.txt" t="Include" />
+          <e p="tree3.txt" t="Include" />
+          <e p="tree4.txt" t="Include" />
+        </e>
+        <e p="Divino" t="Include">
+          <e p="tree1.txt" t="Include" />
+          <e p="tree2.txt" t="Include" />
+          <e p="tree3.txt" t="Include" />
+          <e p="tree4.txt" t="Include" />
+        </e>
+        <e p="Doutor" t="Include">
+          <e p="tree1.txt" t="Include" />
+          <e p="tree2.txt" t="Include" />
+          <e p="tree3.txt" t="Include" />
+          <e p="tree4.txt" t="Include" />
+        </e>
+        <e p="Nildo" t="Include">
+          <e p="tree1 - cópia.txt" t="Include" />
+          <e p="tree1.txt" t="Include" />
+          <e p="tree2.txt" t="Include" />
+          <e p="tree3.txt" t="Include" />
+          <e p="tree4.txt" t="Include" />
+        </e>
+        <e p="Rony" t="Include">
+          <e p="tree1.txt" t="Include" />
+          <e p="tree2.txt" t="Include" />
+          <e p="tree3.txt" t="Include" />
+          <e p="tree4.txt" t="Include" />
+        </e>
+        <e p="Tico-Tico" t="Include">
+          <e p="tree1.txt" t="Include" />
+          <e p="tree2.txt" t="Include" />
+          <e p="tree3.txt" t="Include" />
+          <e p="tree4.txt" t="Include" />
+        </e>
+      </e>
+      <e p="Assets/link.xml" t="Include" />
+      <e p="Assets/pegoal.cs" t="Include" />
+      <e p="Assets/Plugins" t="Include">
+        <e p="Android" t="Include">
+          <e p="AndroidManifest.xml" t="Include" />
+        </e>
+      </e>
+      <e p="Assets/Resources" t="Include">
+        <e p="Trees" t="Include">
+          <e p="tree1.txt" t="Include" />
+          <e p="tree2.txt" t="Include" />
+          <e p="tree3.txt" t="Include" />
+        </e>
+      </e>
+      <e p="Assets/Scripts" t="Include">
+        <e p="about.cs" t="Include" />
+        <e p="BetweenLevelsController.cs" t="Include" />
+        <e p="CountDown.cs" t="Include" />
+        <e p="credits.cs" t="Include" />
+        <e p="CrowdNoiseController.cs" t="Include" />
+        <e p="Editor" t="Include">
+          <e p="EditorUtils.cs" t="Include" />
+        </e>
+        <e p="GameFlowManager.cs" t="Include" />
+        <e p="GameOverlayMenu.cs" t="Include" />
+        <e p="GKAnimController.cs" t="Include" />
+        <e p="JsonGameMenuInput.cs" t="Include" />
+        <e p="JsonInput.cs" t="Include" />
+        <e p="JsonStateInput.cs" t="Include" />
+        <e p="JsonTreeNode.cs" t="Include" />
+        <e p="LevelEditorManager.cs" t="Include" />
+        <e p="LoadStages.cs" t="Include" />
+        <e p="LocalizationManager.cs" t="Include" />
+        <e p="LogUser.cs" t="Include" />
+        <e p="MiscUtils.cs" t="Include" />
+        <e p="PgSqlThread.cs" t="Include" />
+        <e p="PlayerInfo.cs" t="Include" />
+        <e p="ProbabilityConsistencyCheck.cs" t="Include" />
+        <e p="ProbCalculator.cs" t="Include" />
+        <e p="ProgressionBar.cs" t="Include" />
+        <e p="ScoreElement.cs" t="Include" />
+        <e p="ScoreMonitor.cs" t="Include" />
+        <e p="SelfDestruct.cs" t="Include" />
+        <e p="ServerOperations.cs" t="Include" />
+        <e p="TCLE.cs" t="Include" />
+        <e p="TreeBuilderController.cs" t="Include" />
+        <e p="UIManager.cs" t="Include" />
+        <e p="VersusMode.cs" t="Include" />
+        <e p="VisualTreeManager.cs" t="Include" />
+        <e p="VisualTreeNode.cs" t="Include" />
+      </e>
+      <e p="Assets/StreamingAssets" t="Include">
+        <e p="CustomTrees" t="Include">
+          <e p="Diamante" t="Include">
+            <e p="tree1.txt" t="Include" />
+            <e p="tree2.txt" t="Include" />
+            <e p="tree3.txt" t="Include" />
+            <e p="tree4.txt" t="Include" />
+          </e>
+          <e p="Divino" t="Include">
+            <e p="tree1.txt" t="Include" />
+            <e p="tree2.txt" t="Include" />
+            <e p="tree3.txt" t="Include" />
+            <e p="tree4.txt" t="Include" />
+          </e>
+          <e p="Doutor" t="Include">
+            <e p="tree1.txt" t="Include" />
+            <e p="tree2.txt" t="Include" />
+            <e p="tree3.txt" t="Include" />
+            <e p="tree4.txt" t="Include" />
+          </e>
+          <e p="Nildo" t="Include">
+            <e p="tree1.txt" t="Include" />
+            <e p="tree2.txt" t="Include" />
+            <e p="tree3.txt" t="Include" />
+            <e p="tree4.txt" t="Include" />
+          </e>
+          <e p="Rony" t="Include">
+            <e p="tree1.txt" t="Include" />
+            <e p="tree2.txt" t="Include" />
+            <e p="tree3.txt" t="Include" />
+            <e p="tree4.txt" t="Include" />
+          </e>
+          <e p="Tico-Tico" t="Include">
+            <e p="tree1.txt" t="Include" />
+            <e p="tree2.txt" t="Include" />
+            <e p="tree3.txt" t="Include" />
+            <e p="tree4.txt" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Assets/TextMesh Pro" t="Include">
+        <e p="Examples &amp; Extras" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="Anton OFL.txt" t="Include" />
+            <e p="Bangers - OFL.txt" t="Include" />
+            <e p="LiberationSans - OFL.txt" t="Include" />
+            <e p="NotoSans - License.txt" t="Include" />
+            <e p="Oswald Bold - OFL.txt" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Benchmark01.cs" t="Include" />
+            <e p="Benchmark01_UGUI.cs" t="Include" />
+            <e p="Benchmark02.cs" t="Include" />
+            <e p="Benchmark03.cs" t="Include" />
+            <e p="Benchmark04.cs" t="Include" />
+            <e p="CameraController.cs" t="Include" />
+            <e p="ChatController.cs" t="Include" />
+            <e p="EnvMapAnimator.cs" t="Include" />
+            <e p="ObjectSpin.cs" t="Include" />
+            <e p="ShaderPropAnimator.cs" t="Include" />
+            <e p="SimpleScript.cs" t="Include" />
+            <e p="SkewTextExample.cs" t="Include" />
+            <e p="TeleType.cs" t="Include" />
+            <e p="TextConsoleSimulator.cs" t="Include" />
+            <e p="TextMeshProFloatingText.cs" t="Include" />
+            <e p="TextMeshSpawner.cs" t="Include" />
+            <e p="TMP_DigitValidator.cs" t="Include" />
+            <e p="TMP_ExampleScript_01.cs" t="Include" />
+            <e p="TMP_FrameRateCounter.cs" t="Include" />
+            <e p="TMP_PhoneNumberValidator.cs" t="Include" />
+            <e p="TMP_TextEventCheck.cs" t="Include" />
+            <e p="TMP_TextEventHandler.cs" t="Include" />
+            <e p="TMP_TextInfoDebugTool.cs" t="Include" />
+            <e p="TMP_TextSelector_A.cs" t="Include" />
+            <e p="TMP_TextSelector_B.cs" t="Include" />
+            <e p="TMP_UiFrameRateCounter.cs" t="Include" />
+            <e p="TMPro_InstructionOverlay.cs" t="Include" />
+            <e p="VertexColorCycler.cs" t="Include" />
+            <e p="VertexJitter.cs" t="Include" />
+            <e p="VertexShakeA.cs" t="Include" />
+            <e p="VertexShakeB.cs" t="Include" />
+            <e p="VertexZoom.cs" t="Include" />
+            <e p="WarpTextExample.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Resources" t="Include">
+          <e p="LineBreaking Following Characters.txt" t="Include" />
+          <e p="LineBreaking Leading Characters.txt" t="Include" />
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+        </e>
+        <e p="Sprites" t="Include">
+          <e p="EmojiOne Attribution.txt" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp/bin" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.1/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.1/resharper-host/local/Transient/ReSharperHost/v191/SolutionCaches/_190614-JG-EEG.-371101785.00" t="ExcludeRecursive" />
+  </component>
+</project>
