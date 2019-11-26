@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="70feedca-160c-41ea-bcc0-3175ec574d7d" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-74">
+              <caret line="1485" column="8" selection-start-line="1485" selection-start-column="8" selection-end-line="1485" selection-end-column="8" />
+              <folding>
+                <marker date="1573655178000" expanded="true" signature="89:244" ph="/* Module written by scaroni &lt;renato.scaroni@gmail.com&gt; ... */" />
+                <marker date="1573655178000" expanded="false" signature="340:946" ph="..." />
+                <marker date="1573655178000" expanded="true" signature="1174:1983" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="2112:84048" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="7957:8586" ph="/* public  int  timeBetweenMarkersSerial = 10000000; //180129 10^7 time between sendMarkersToSerial on BrainProdu ... */" />
+                <marker date="1573655178000" expanded="true" signature="9250:9332" ph="/* 170623 DLLs inpout32.dll from http://highrez.co.uk ... */" />
+                <marker date="1573655178000" expanded="true" signature="10028:10065" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="10038:10062" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="10137:10286" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="10146:10283" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="10175:10257" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="10355:10430" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="10435:10720" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="10765:25363" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="10859:11233" ph="/* Debug.Log(&quot;@BtnActionGetEvent:Time.realtimeSinceStartup = &quot;+ Time.realtimeSinceStartup); ... */" />
+                <marker date="1573655178000" expanded="true" signature="11693:25360" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="11821:11999" ph="/* 170920 o PlayPause só vai valer entre o mostrar a seta e o user selecionar; ... */" />
+                <marker date="1573655178000" expanded="true" signature="12072:12719" ph="/* 170320 trocado para ca para tentar isolar a diferenca entre o tempo total de jogo e o tempo de movimento menos ... */" />
+                <marker date="1573655178000" expanded="true" signature="13020:13123" ph="/* Debug.Log(&quot;eLog.realTime = &quot;+ eLog.realTime); ... */" />
+                <marker date="1573655178000" expanded="true" signature="13530:13579" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="13725:13916" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="13756:13786" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="13822:13854" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="14471:14689" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="14478:14634" ph="/* BM com tempo ... */" />
+                <marker date="1573655178000" expanded="true" signature="14857:14899" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="14917:14946" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="15070:15116" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="15266:15897" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="15273:15892" ph="/* troca a bola pela cruz - 20190702&#9;attentionPointColor (eLog.correct == true?1:2);  //on Inspector: 0: start, 1 ... */" />
+                <marker date="1573655178000" expanded="true" signature="15902:16014" ph="/* 170921 zerar ou acumular minHitsInSequence ... */" />
+                <marker date="1573655178000" expanded="true" signature="16036:16076" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="16258:16289" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="16325:16358" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="16614:16699" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="16730:17078" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="16793:17073" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="16900:16973" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="17108:17456" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="17171:17451" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="17278:17351" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="17525:17757" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="17584:17657" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="17864:17955" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="17978:18246" ph="/* 170630 ... */" />
+                <marker date="1573655178000" expanded="true" signature="18294:22549" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="18348:20204" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="18475:18599" ph="/* 170626 enviar os marcadores EEG se necessario (apenas se JG); ... */" />
+                <marker date="1573655178000" expanded="true" signature="20326:22538" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="20447:20623" ph="/* 180201 changed to convert 3 markers in 1; need 18 markers changing response by stimuli on EEG BrainProducts; ... */" />
+                <marker date="1573655178000" expanded="true" signature="20642:21207" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="20677:20935" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="20718:20800" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="20982:21064" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="21234:21813" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="21270:21534" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="21312:21396" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="21582:21666" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="21867:22131" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="21909:21993" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="22179:22263" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="22739:22880" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="22773:22792" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="22839:22875" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="22960:23116" ph="/* ########################################################################################################################################################################## ... */" />
+                <marker date="1573655178000" expanded="true" signature="23192:24891" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="23195:23288" ph="/* MD ... */" />
+                <marker date="1573655178000" expanded="true" signature="23314:23365" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="23399:23452" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="23487:23542" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="23578:24322" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="23757:24149" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="23969:24139" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="24503:24678" ph="/* placarFirstScreen.text = ... */" />
+                <marker date="1573655178000" expanded="true" signature="24895:25288" ph="/* ########################################################################################################################################################################## ... */" />
+                <marker date="1573655178000" expanded="true" signature="25368:25652" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="25702:31470" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="25784:31467" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="25791:26227" ph="/* 170108 pode estar na mdFirstScreen que acumula _events dos testes de memoria (eventCount)  ou estar no JM 5 na ... */" />
+                <marker date="1573655178000" expanded="true" signature="26253:31383" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="26261:26661" ph="/* 170830 if player agree to give his results, prepare to write file results ... */" />
+                <marker date="1573655178000" expanded="true" signature="26749:26931" ph="/* Josi 161229 nao precisa mais do primeiro parametro ... */" />
+                <marker date="1573655178000" expanded="true" signature="27184:27210" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="27422:27474" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="27772:27849" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="27905:28007" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="28126:28257" ph="/* 170417 montar string para apresentar no arquivo de resultados; ... */" />
+                <marker date="1573655178000" expanded="true" signature="28327:29373" ph="/* 170126 getCurrentReadSequ(do jogo selecionado) + param numHits (num minimo de jogadas corretas) ... */" />
+                <marker date="1573655178000" expanded="true" signature="31145:31309" ph="/* 170306 zerar a lista para não entrar aqui pelo GoToIntro e gerar dois arquivos de resultados para o mesmo JM ( ... */" />
+                <marker date="1573655178000" expanded="true" signature="31337:31378" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="31474:31631" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="31678:32519" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="31925:31965" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="32061:32198" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="32087:32138" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="32225:32516" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="32523:32790" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="32824:32852" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="32856:33047" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="33091:35156" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="33097:33596" ph="/* on Inspector: 0: start, 1:correct, 2:wrong ... */" />
+                <marker date="1573655178000" expanded="true" signature="33654:35114" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="33682:33943" ph="/* Paulo Roberto pediu para tirar - 20190715&#9;&#9;&#9;&#9;cruzLaranja.gameObject.SetActive(true); ... */" />
+                <marker date="1573655178000" expanded="true" signature="33944:34130" ph="/* exibeFaixa.GetComponent&lt;Text&gt;().text = &quot;Faixa 1&quot;; ... */" />
+                <marker date="1573655178000" expanded="true" signature="34165:34426" ph="/* Paulo Roberto pediu para tirar - 20190715&#9;&#9;&#9;&#9;cruzLaranja.gameObject.SetActive(false); ... */" />
+                <marker date="1573655178000" expanded="true" signature="34427:34613" ph="/* exibeFaixa.GetComponent&lt;Text&gt;().text = &quot;Faixa 2&quot;; ... */" />
+                <marker date="1573655178000" expanded="true" signature="34647:34908" ph="/* Paulo Roberto pediu para tirar - 20190715&#9;&#9;&#9;&#9;cruzLaranja.gameObject.SetActive(false); ... */" />
+                <marker date="1573655178000" expanded="true" signature="34909:35098" ph="/* exibeFaixa.GetComponent&lt;Text&gt;().text = &quot;Faixa 3/4&quot;; ... */" />
+                <marker date="1573655178000" expanded="true" signature="35159:35357" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="35403:35980" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="35876:35910" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="35985:36175" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="36206:40262" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="36271:40228" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="36314:36473" ph="/* 170112 se eh ultima animacao defendeu/perdeu antes da tela de betweenLevels, nao fazer ... */" />
+                <marker date="1573655178000" expanded="true" signature="36560:40224" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="36673:37743" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="36750:37269" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="36997:37112" ph="/* 170818 se Android, vibrar ao acertar ... */" />
+                <marker date="1573655178000" expanded="true" signature="37880:39085" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="37962:38519" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="37964:38136" ph="/* if correct, animations cheer+defendeu ... */" />
+                <marker date="1573655178000" expanded="true" signature="38240:38356" ph="/* 170818 se Android, vibrar ao acertar ... */" />
+                <marker date="1573655178000" expanded="true" signature="38563:38733" ph="/* if wrong, animations lament+perdeu ... */" />
+                <marker date="1573655178000" expanded="true" signature="39146:39275" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="39149:39241" ph="/* sem anim som e visual ... */" />
+                <marker date="1573655178000" expanded="true" signature="39295:39871" ph="/* btnsAndQuestion.SetActive(true);  //180416 try to increase speed for activate the btns before ... */" />
+                <marker date="1573655178000" expanded="true" signature="39950:39980" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="40267:40414" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="40458:42317" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="40621:42314" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="40646:41287" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="40850:41282" ph="/* 170928 AQ/AR na opcao minHitsInSequ ... */" />
+                <marker date="1573655178000" expanded="true" signature="41435:42038" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="41455:41688" ph="/* 170124 Base memória (input de teclado) tem placar; Jogo da memória nao tem placar ... */" />
+                <marker date="1573655178000" expanded="true" signature="42100:42299" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="42108:42169" ph="/* 170125 Jogo da memoria ... */" />
+                <marker date="1573655178000" expanded="true" signature="42320:42491" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="42541:43982" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="42848:43003" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="43240:43417" ph="/* Debug.Log(&quot;@CEL:Time.realtimeSinceStartup = &quot;+ Time.realtimeSinceStartup); ... */" />
+                <marker date="1573655178000" expanded="true" signature="43663:43765" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="43687:43761" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="43987:44228" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="44277:45771" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="44898:45065" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="45092:45312" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="45776:46111" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="46158:46560" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="46564:46763" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="46793:47311" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="47316:47526" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="47567:48356" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="48362:48593" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="48631:49700" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="48658:49697" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="48663:48825" ph="/* 170417 estava demorando muito tempo se o user apenas quisesse olhar a primeira tela e Exitar ... */" />
+                <marker date="1573655178000" expanded="true" signature="48867:49360" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="48873:49220" ph="/* 170824 calcular o tempo que falta para acabar a animação; ... */" />
+                <marker date="1573655178000" expanded="true" signature="49393:49422" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="49832:50539" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="49838:50022" ph="/* 170322 unity3d tem erro ao usar application.Quit ... */" />
+                <marker date="1573655178000" expanded="true" signature="50052:50536" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="50168:50235" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="50389:50452" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="50674:50716" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="50852:50894" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="51085:59511" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="51405:51502" ph="/* Debug.Log(&quot;movementTimeA = &quot;+ movementTimeA); ... */" />
+                <marker date="1573655178000" expanded="true" signature="51981:52170" ph="/* Debug.Log(&quot;INICIO&quot;); ... */" />
+                <marker date="1573655178000" expanded="true" signature="52172:52577" ph="/* Debug.Log(&quot;Flag 1&quot;); ... */" />
+                <marker date="1573655178000" expanded="true" signature="52580:52753" ph="/* yield return new WaitForSeconds(0.25f); ... */" />
+                <marker date="1573655178000" expanded="true" signature="52754:53147" ph="/* define_Quadro1(); ... */" />
+                <marker date="1573655178000" expanded="true" signature="54036:54154" ph="/* 171031 based on locale, select the correct animation/sound and remove unused ... */" />
+                <marker date="1573655178000" expanded="true" signature="54180:54356" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="54390:54572" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="54607:54795" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="55024:55067" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="55287:55722" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="55843:56076" ph="/* 170630 ... */" />
+                <marker date="1573655178000" expanded="true" signature="56124:57761" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="56177:57244" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="56183:56744" ph="/* 170623 trecho para incluir a DLL para envio para o EEG, em Windows 32/64 bits ... */" />
+                <marker date="1573655178000" expanded="true" signature="56878:57020" ph="/* definePortAccess (0x378); ... */" />
+                <marker date="1573655178000" expanded="true" signature="57301:57752" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="57525:57734" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="57766:57959" ph="/* 170822 ================================================================== ... */" />
+                <marker date="1573655178000" expanded="true" signature="58124:58339" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="58129:58227" ph="/* 171010 ... */" />
+                <marker date="1573655178000" expanded="true" signature="58350:58451" ph="/* 171010 ... */" />
+                <marker date="1573655178000" expanded="true" signature="58568:58710" ph="/* 180411 ================================================================== ... */" />
+                <marker date="1573655178000" expanded="true" signature="58748:59141" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="58868:59137" ph="/* attentionPoint.GetComponentsInChildren&lt;Image&gt;()[0].color = probs.attentionColors (0); ... */" />
+                <marker date="1573655178000" expanded="true" signature="59142:59507" ph="/* Paulo Roberto pediu para tirar - 20190715&#9;&#9;cruzLaranja.gameObject.SetActive(true); //troca a bola pela cruz -  ... */" />
+                <marker date="1573655178000" expanded="true" signature="59636:67389" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="60316:60705" ph="/* Debug.Log(&quot;@ALE:Time.realtimeSinceStartup = &quot;+ Time.realtimeSinceStartup); ... */" />
+                <marker date="1573655178000" expanded="true" signature="60710:60875" ph="/* 161226 nunca entra aqui por ser &gt;= gkAnim... ... */" />
+                <marker date="1573655178000" expanded="true" signature="61032:61070" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="61427:61569" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="61657:67050" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="61662:61807" ph="/* ============================================================================ ... */" />
+                <marker date="1573655178000" expanded="true" signature="61856:61985" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="61949:61980" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="61991:62118" ph="/* ============================================================================ ... */" />
+                <marker date="1573655178000" expanded="true" signature="62196:62796" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="62221:62791" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="62230:62426" ph="/* para aceitar qualquer tecla! ... */" />
+                <marker date="1573655178000" expanded="true" signature="62533:62785" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="62961:64828" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="62985:64823" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="62992:63139" ph="/* 170310 //to accept any key... except click on EXIT button ... */" />
+                <marker date="1573655178000" expanded="true" signature="63246:64817" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="63899:64091" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="64129:64331" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="64370:64575" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="65091:65226" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="65152:65221" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="65231:65446" ph="/* ============================================================================ ... */" />
+                <marker date="1573655178000" expanded="true" signature="65561:66995" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="65672:66078" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="65679:66072" ph="/* 20190702 - Mantem a bola Laranja por cerca de 1 segundo e troca para a Verde ... */" />
+                <marker date="1573655178000" expanded="true" signature="66216:66409" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="66228:66323" ph="/* 180328 user defined input key for center defense ... */" />
+                <marker date="1573655178000" expanded="true" signature="66359:66403" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="66623:66766" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="66877:66977" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="67061:67204" ph="/* ============================================================================ ... */" />
+                <marker date="1573655178000" expanded="true" signature="67254:67382" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="67346:67377" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="67393:67553" ph="/* -------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="67653:72639" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="67853:68541" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="67858:67970" ph="/* print(&quot;acabou 321&quot;); ... */" />
+                <marker date="1573655178000" expanded="true" signature="68090:68164" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="68232:68313" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="68348:68418" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="68454:68526" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="68561:72636" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="69701:69828" ph="/* print(&quot;acabou defendeu ou perdeu&quot;); ... */" />
+                <marker date="1573655178000" expanded="true" signature="69847:72632" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="69899:69955" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="70014:70936" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="71274:71357" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="71840:71939" ph="/* Debug.Log(&quot;movementTimeA = &quot;+ movementTimeA); ... */" />
+                <marker date="1573655178000" expanded="true" signature="72523:72627" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="72642:72890" ph="/* --------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="73365:73483" ph="/* dll.text = &quot;Open inpOut32.dll&quot;; ... */" />
+                <marker date="1573655178000" expanded="true" signature="73493:73616" ph="/* --------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="73868:74047" ph="/* --------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="74078:77185" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="74102:76251" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="74107:74537" ph="/* ------------------------------------------------------------------------------- Play pressed ... */" />
+                <marker date="1573655178000" expanded="true" signature="74579:74962" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="74655:74774" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="74833:74879" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="75020:75269" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="75095:75176" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="75352:75475" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="75773:75866" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="75870:76013" ph="/* 170919 mas depois da explicação ainda pode haver paradas; ... */" />
+                <marker date="1573655178000" expanded="true" signature="76056:76220" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="76262:76457" ph="/* ------------------------------------------------------------------------------- Pause pressed ... */" />
+                <marker date="1573655178000" expanded="true" signature="76507:76619" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="76702:76822" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="77189:77300" ph="/* --------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="77340:77418" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="77375:77415" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="77422:77764" ph="/* --------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="77796:78108" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="78112:78227" ph="/* --------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="78268:78903" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="78333:78431" ph="/* em Programming Examples: http://www.brainproducts.com/downloads.php?kid=40 ... */" />
+                <marker date="1573655178000" expanded="true" signature="78613:78638" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="78661:78854" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="78787:78850" ph="/* if (e.GetType().IsSubclassOf(typeof(Exception))) ... */" />
+                <marker date="1573655178000" expanded="true" signature="78907:79023" ph="/* --------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="79054:79331" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="79100:79310" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="79335:79451" ph="/* --------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="79496:79893" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="79502:79847" ph="/* 180129 brainProducts EEG connected to the triggerBox using USB ... */" />
+                <marker date="1573655178000" expanded="true" signature="79897:80009" ph="/* --------------------------------------------------------------------------------------- ... */" />
+                <marker date="1573655178000" expanded="true" signature="80046:80906" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="80099:80560" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="80677:80899" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="80958:83218" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="81041:83214" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="81545:81819" ph="/* StartCoroutine(Waiting(time)); ... */" />
+                <marker date="1573655178000" expanded="true" signature="82087:82324" ph="/* StartCoroutine(Waiting(time)); ... */" />
+                <marker date="1573655178000" expanded="true" signature="82574:82742" ph="/* frame0EEG.SetActive(true); ... */" />
+                <marker date="1573655178000" expanded="true" signature="82993:83198" ph="/* frame0EEG.SetActive(true); ... */" />
+                <marker date="1573655178000" expanded="true" signature="83256:83336" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="83367:83491" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="83521:83614" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="83644:83737" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="83765:84045" ph="{...}" />
+                <marker date="1573655178000" expanded="true" signature="83769:83874" ph="/* define_Quadro1 (); ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/CustomTrees/Nildo/tree1.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>send</find>
+      <find>err03</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameFlowManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples _ Extras/Scripts/TMP_TextSelector_B.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples _ Extras/Scripts/TMP_ExampleScript_01.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples _ Extras/Scripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/CustomTrees/Nildo/tree1.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/.idea.JG-EEG/.idea/indexLayout.xml" />
+        <option value="$PROJECT_DIR$/.idea/.idea.JG-EEG/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="444" />
+    <option name="y" value="46" />
+    <option name="width" value="1289" />
+    <option name="height" value="879" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="UnityExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AssemblyExplorer" />
+      <pane id="UnityExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+            </path>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="CustomTrees" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="CustomTrees" type="1045f7f1:UnityExplorerNode" />
+              <item name="Nildo" type="1045f7f1:UnityExplorerNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-hidden-items" value="false" />
+        <option name="show-project-names" value="true" />
+      </pane>
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="70feedca-160c-41ea-bcc0-3175ec574d7d" name="Default Changelist" comment="" />
+      <created>1574711473855</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574711473855</updated>
+      <workItem from="1574711510070" duration="714000" />
+      <workItem from="1574712952554" duration="632000" />
+      <workItem from="1574713752185" duration="428000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1774000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="444" y="46" width="1289" height="879" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21090618" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Unity" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Unit Tests" order="13" />
+      <window_info anchor="bottom" id="Terminal" order="14" />
+      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/StreamingAssets/CustomTrees/Nildo/tree1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-74">
+          <caret line="1485" column="8" selection-start-line="1485" selection-start-column="8" selection-end-line="1485" selection-end-column="8" />
+          <folding>
+            <marker date="1573655178000" expanded="true" signature="89:244" ph="/* Module written by scaroni &lt;renato.scaroni@gmail.com&gt; ... */" />
+            <marker date="1573655178000" expanded="false" signature="340:946" ph="..." />
+            <marker date="1573655178000" expanded="true" signature="1174:1983" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="2112:84048" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="7957:8586" ph="/* public  int  timeBetweenMarkersSerial = 10000000; //180129 10^7 time between sendMarkersToSerial on BrainProdu ... */" />
+            <marker date="1573655178000" expanded="true" signature="9250:9332" ph="/* 170623 DLLs inpout32.dll from http://highrez.co.uk ... */" />
+            <marker date="1573655178000" expanded="true" signature="10028:10065" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="10038:10062" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="10137:10286" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="10146:10283" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="10175:10257" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="10355:10430" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="10435:10720" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="10765:25363" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="10859:11233" ph="/* Debug.Log(&quot;@BtnActionGetEvent:Time.realtimeSinceStartup = &quot;+ Time.realtimeSinceStartup); ... */" />
+            <marker date="1573655178000" expanded="true" signature="11693:25360" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="11821:11999" ph="/* 170920 o PlayPause só vai valer entre o mostrar a seta e o user selecionar; ... */" />
+            <marker date="1573655178000" expanded="true" signature="12072:12719" ph="/* 170320 trocado para ca para tentar isolar a diferenca entre o tempo total de jogo e o tempo de movimento menos ... */" />
+            <marker date="1573655178000" expanded="true" signature="13020:13123" ph="/* Debug.Log(&quot;eLog.realTime = &quot;+ eLog.realTime); ... */" />
+            <marker date="1573655178000" expanded="true" signature="13530:13579" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="13725:13916" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="13756:13786" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="13822:13854" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="14471:14689" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="14478:14634" ph="/* BM com tempo ... */" />
+            <marker date="1573655178000" expanded="true" signature="14857:14899" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="14917:14946" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="15070:15116" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="15266:15897" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="15273:15892" ph="/* troca a bola pela cruz - 20190702&#9;attentionPointColor (eLog.correct == true?1:2);  //on Inspector: 0: start, 1 ... */" />
+            <marker date="1573655178000" expanded="true" signature="15902:16014" ph="/* 170921 zerar ou acumular minHitsInSequence ... */" />
+            <marker date="1573655178000" expanded="true" signature="16036:16076" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="16258:16289" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="16325:16358" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="16614:16699" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="16730:17078" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="16793:17073" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="16900:16973" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="17108:17456" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="17171:17451" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="17278:17351" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="17525:17757" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="17584:17657" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="17864:17955" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="17978:18246" ph="/* 170630 ... */" />
+            <marker date="1573655178000" expanded="true" signature="18294:22549" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="18348:20204" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="18475:18599" ph="/* 170626 enviar os marcadores EEG se necessario (apenas se JG); ... */" />
+            <marker date="1573655178000" expanded="true" signature="20326:22538" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="20447:20623" ph="/* 180201 changed to convert 3 markers in 1; need 18 markers changing response by stimuli on EEG BrainProducts; ... */" />
+            <marker date="1573655178000" expanded="true" signature="20642:21207" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="20677:20935" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="20718:20800" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="20982:21064" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="21234:21813" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="21270:21534" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="21312:21396" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="21582:21666" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="21867:22131" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="21909:21993" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="22179:22263" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="22739:22880" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="22773:22792" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="22839:22875" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="22960:23116" ph="/* ########################################################################################################################################################################## ... */" />
+            <marker date="1573655178000" expanded="true" signature="23192:24891" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="23195:23288" ph="/* MD ... */" />
+            <marker date="1573655178000" expanded="true" signature="23314:23365" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="23399:23452" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="23487:23542" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="23578:24322" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="23757:24149" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="23969:24139" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="24503:24678" ph="/* placarFirstScreen.text = ... */" />
+            <marker date="1573655178000" expanded="true" signature="24895:25288" ph="/* ########################################################################################################################################################################## ... */" />
+            <marker date="1573655178000" expanded="true" signature="25368:25652" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="25702:31470" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="25784:31467" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="25791:26227" ph="/* 170108 pode estar na mdFirstScreen que acumula _events dos testes de memoria (eventCount)  ou estar no JM 5 na ... */" />
+            <marker date="1573655178000" expanded="true" signature="26253:31383" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="26261:26661" ph="/* 170830 if player agree to give his results, prepare to write file results ... */" />
+            <marker date="1573655178000" expanded="true" signature="26749:26931" ph="/* Josi 161229 nao precisa mais do primeiro parametro ... */" />
+            <marker date="1573655178000" expanded="true" signature="27184:27210" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="27422:27474" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="27772:27849" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="27905:28007" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="28126:28257" ph="/* 170417 montar string para apresentar no arquivo de resultados; ... */" />
+            <marker date="1573655178000" expanded="true" signature="28327:29373" ph="/* 170126 getCurrentReadSequ(do jogo selecionado) + param numHits (num minimo de jogadas corretas) ... */" />
+            <marker date="1573655178000" expanded="true" signature="31145:31309" ph="/* 170306 zerar a lista para não entrar aqui pelo GoToIntro e gerar dois arquivos de resultados para o mesmo JM ( ... */" />
+            <marker date="1573655178000" expanded="true" signature="31337:31378" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="31474:31631" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="31678:32519" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="31925:31965" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="32061:32198" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="32087:32138" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="32225:32516" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="32523:32790" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="32824:32852" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="32856:33047" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="33091:35156" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="33097:33596" ph="/* on Inspector: 0: start, 1:correct, 2:wrong ... */" />
+            <marker date="1573655178000" expanded="true" signature="33654:35114" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="33682:33943" ph="/* Paulo Roberto pediu para tirar - 20190715&#9;&#9;&#9;&#9;cruzLaranja.gameObject.SetActive(true); ... */" />
+            <marker date="1573655178000" expanded="true" signature="33944:34130" ph="/* exibeFaixa.GetComponent&lt;Text&gt;().text = &quot;Faixa 1&quot;; ... */" />
+            <marker date="1573655178000" expanded="true" signature="34165:34426" ph="/* Paulo Roberto pediu para tirar - 20190715&#9;&#9;&#9;&#9;cruzLaranja.gameObject.SetActive(false); ... */" />
+            <marker date="1573655178000" expanded="true" signature="34427:34613" ph="/* exibeFaixa.GetComponent&lt;Text&gt;().text = &quot;Faixa 2&quot;; ... */" />
+            <marker date="1573655178000" expanded="true" signature="34647:34908" ph="/* Paulo Roberto pediu para tirar - 20190715&#9;&#9;&#9;&#9;cruzLaranja.gameObject.SetActive(false); ... */" />
+            <marker date="1573655178000" expanded="true" signature="34909:35098" ph="/* exibeFaixa.GetComponent&lt;Text&gt;().text = &quot;Faixa 3/4&quot;; ... */" />
+            <marker date="1573655178000" expanded="true" signature="35159:35357" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="35403:35980" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="35876:35910" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="35985:36175" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="36206:40262" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="36271:40228" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="36314:36473" ph="/* 170112 se eh ultima animacao defendeu/perdeu antes da tela de betweenLevels, nao fazer ... */" />
+            <marker date="1573655178000" expanded="true" signature="36560:40224" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="36673:37743" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="36750:37269" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="36997:37112" ph="/* 170818 se Android, vibrar ao acertar ... */" />
+            <marker date="1573655178000" expanded="true" signature="37880:39085" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="37962:38519" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="37964:38136" ph="/* if correct, animations cheer+defendeu ... */" />
+            <marker date="1573655178000" expanded="true" signature="38240:38356" ph="/* 170818 se Android, vibrar ao acertar ... */" />
+            <marker date="1573655178000" expanded="true" signature="38563:38733" ph="/* if wrong, animations lament+perdeu ... */" />
+            <marker date="1573655178000" expanded="true" signature="39146:39275" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="39149:39241" ph="/* sem anim som e visual ... */" />
+            <marker date="1573655178000" expanded="true" signature="39295:39871" ph="/* btnsAndQuestion.SetActive(true);  //180416 try to increase speed for activate the btns before ... */" />
+            <marker date="1573655178000" expanded="true" signature="39950:39980" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="40267:40414" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="40458:42317" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="40621:42314" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="40646:41287" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="40850:41282" ph="/* 170928 AQ/AR na opcao minHitsInSequ ... */" />
+            <marker date="1573655178000" expanded="true" signature="41435:42038" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="41455:41688" ph="/* 170124 Base memória (input de teclado) tem placar; Jogo da memória nao tem placar ... */" />
+            <marker date="1573655178000" expanded="true" signature="42100:42299" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="42108:42169" ph="/* 170125 Jogo da memoria ... */" />
+            <marker date="1573655178000" expanded="true" signature="42320:42491" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="42541:43982" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="42848:43003" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="43240:43417" ph="/* Debug.Log(&quot;@CEL:Time.realtimeSinceStartup = &quot;+ Time.realtimeSinceStartup); ... */" />
+            <marker date="1573655178000" expanded="true" signature="43663:43765" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="43687:43761" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="43987:44228" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="44277:45771" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="44898:45065" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="45092:45312" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="45776:46111" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="46158:46560" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="46564:46763" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="46793:47311" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="47316:47526" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="47567:48356" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="48362:48593" ph="/* -------------------------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="48631:49700" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="48658:49697" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="48663:48825" ph="/* 170417 estava demorando muito tempo se o user apenas quisesse olhar a primeira tela e Exitar ... */" />
+            <marker date="1573655178000" expanded="true" signature="48867:49360" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="48873:49220" ph="/* 170824 calcular o tempo que falta para acabar a animação; ... */" />
+            <marker date="1573655178000" expanded="true" signature="49393:49422" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="49832:50539" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="49838:50022" ph="/* 170322 unity3d tem erro ao usar application.Quit ... */" />
+            <marker date="1573655178000" expanded="true" signature="50052:50536" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="50168:50235" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="50389:50452" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="50674:50716" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="50852:50894" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="51085:59511" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="51405:51502" ph="/* Debug.Log(&quot;movementTimeA = &quot;+ movementTimeA); ... */" />
+            <marker date="1573655178000" expanded="true" signature="51981:52170" ph="/* Debug.Log(&quot;INICIO&quot;); ... */" />
+            <marker date="1573655178000" expanded="true" signature="52172:52577" ph="/* Debug.Log(&quot;Flag 1&quot;); ... */" />
+            <marker date="1573655178000" expanded="true" signature="52580:52753" ph="/* yield return new WaitForSeconds(0.25f); ... */" />
+            <marker date="1573655178000" expanded="true" signature="52754:53147" ph="/* define_Quadro1(); ... */" />
+            <marker date="1573655178000" expanded="true" signature="54036:54154" ph="/* 171031 based on locale, select the correct animation/sound and remove unused ... */" />
+            <marker date="1573655178000" expanded="true" signature="54180:54356" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="54390:54572" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="54607:54795" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="55024:55067" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="55287:55722" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="55843:56076" ph="/* 170630 ... */" />
+            <marker date="1573655178000" expanded="true" signature="56124:57761" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="56177:57244" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="56183:56744" ph="/* 170623 trecho para incluir a DLL para envio para o EEG, em Windows 32/64 bits ... */" />
+            <marker date="1573655178000" expanded="true" signature="56878:57020" ph="/* definePortAccess (0x378); ... */" />
+            <marker date="1573655178000" expanded="true" signature="57301:57752" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="57525:57734" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="57766:57959" ph="/* 170822 ================================================================== ... */" />
+            <marker date="1573655178000" expanded="true" signature="58124:58339" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="58129:58227" ph="/* 171010 ... */" />
+            <marker date="1573655178000" expanded="true" signature="58350:58451" ph="/* 171010 ... */" />
+            <marker date="1573655178000" expanded="true" signature="58568:58710" ph="/* 180411 ================================================================== ... */" />
+            <marker date="1573655178000" expanded="true" signature="58748:59141" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="58868:59137" ph="/* attentionPoint.GetComponentsInChildren&lt;Image&gt;()[0].color = probs.attentionColors (0); ... */" />
+            <marker date="1573655178000" expanded="true" signature="59142:59507" ph="/* Paulo Roberto pediu para tirar - 20190715&#9;&#9;cruzLaranja.gameObject.SetActive(true); //troca a bola pela cruz -  ... */" />
+            <marker date="1573655178000" expanded="true" signature="59636:67389" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="60316:60705" ph="/* Debug.Log(&quot;@ALE:Time.realtimeSinceStartup = &quot;+ Time.realtimeSinceStartup); ... */" />
+            <marker date="1573655178000" expanded="true" signature="60710:60875" ph="/* 161226 nunca entra aqui por ser &gt;= gkAnim... ... */" />
+            <marker date="1573655178000" expanded="true" signature="61032:61070" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="61427:61569" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="61657:67050" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="61662:61807" ph="/* ============================================================================ ... */" />
+            <marker date="1573655178000" expanded="true" signature="61856:61985" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="61949:61980" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="61991:62118" ph="/* ============================================================================ ... */" />
+            <marker date="1573655178000" expanded="true" signature="62196:62796" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="62221:62791" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="62230:62426" ph="/* para aceitar qualquer tecla! ... */" />
+            <marker date="1573655178000" expanded="true" signature="62533:62785" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="62961:64828" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="62985:64823" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="62992:63139" ph="/* 170310 //to accept any key... except click on EXIT button ... */" />
+            <marker date="1573655178000" expanded="true" signature="63246:64817" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="63899:64091" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="64129:64331" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="64370:64575" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="65091:65226" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="65152:65221" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="65231:65446" ph="/* ============================================================================ ... */" />
+            <marker date="1573655178000" expanded="true" signature="65561:66995" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="65672:66078" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="65679:66072" ph="/* 20190702 - Mantem a bola Laranja por cerca de 1 segundo e troca para a Verde ... */" />
+            <marker date="1573655178000" expanded="true" signature="66216:66409" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="66228:66323" ph="/* 180328 user defined input key for center defense ... */" />
+            <marker date="1573655178000" expanded="true" signature="66359:66403" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="66623:66766" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="66877:66977" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="67061:67204" ph="/* ============================================================================ ... */" />
+            <marker date="1573655178000" expanded="true" signature="67254:67382" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="67346:67377" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="67393:67553" ph="/* -------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="67653:72639" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="67853:68541" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="67858:67970" ph="/* print(&quot;acabou 321&quot;); ... */" />
+            <marker date="1573655178000" expanded="true" signature="68090:68164" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="68232:68313" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="68348:68418" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="68454:68526" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="68561:72636" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="69701:69828" ph="/* print(&quot;acabou defendeu ou perdeu&quot;); ... */" />
+            <marker date="1573655178000" expanded="true" signature="69847:72632" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="69899:69955" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="70014:70936" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="71274:71357" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="71840:71939" ph="/* Debug.Log(&quot;movementTimeA = &quot;+ movementTimeA); ... */" />
+            <marker date="1573655178000" expanded="true" signature="72523:72627" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="72642:72890" ph="/* --------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="73365:73483" ph="/* dll.text = &quot;Open inpOut32.dll&quot;; ... */" />
+            <marker date="1573655178000" expanded="true" signature="73493:73616" ph="/* --------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="73868:74047" ph="/* --------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="74078:77185" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="74102:76251" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="74107:74537" ph="/* ------------------------------------------------------------------------------- Play pressed ... */" />
+            <marker date="1573655178000" expanded="true" signature="74579:74962" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="74655:74774" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="74833:74879" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="75020:75269" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="75095:75176" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="75352:75475" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="75773:75866" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="75870:76013" ph="/* 170919 mas depois da explicação ainda pode haver paradas; ... */" />
+            <marker date="1573655178000" expanded="true" signature="76056:76220" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="76262:76457" ph="/* ------------------------------------------------------------------------------- Pause pressed ... */" />
+            <marker date="1573655178000" expanded="true" signature="76507:76619" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="76702:76822" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="77189:77300" ph="/* --------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="77340:77418" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="77375:77415" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="77422:77764" ph="/* --------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="77796:78108" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="78112:78227" ph="/* --------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="78268:78903" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="78333:78431" ph="/* em Programming Examples: http://www.brainproducts.com/downloads.php?kid=40 ... */" />
+            <marker date="1573655178000" expanded="true" signature="78613:78638" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="78661:78854" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="78787:78850" ph="/* if (e.GetType().IsSubclassOf(typeof(Exception))) ... */" />
+            <marker date="1573655178000" expanded="true" signature="78907:79023" ph="/* --------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="79054:79331" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="79100:79310" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="79335:79451" ph="/* --------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="79496:79893" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="79502:79847" ph="/* 180129 brainProducts EEG connected to the triggerBox using USB ... */" />
+            <marker date="1573655178000" expanded="true" signature="79897:80009" ph="/* --------------------------------------------------------------------------------------- ... */" />
+            <marker date="1573655178000" expanded="true" signature="80046:80906" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="80099:80560" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="80677:80899" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="80958:83218" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="81041:83214" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="81545:81819" ph="/* StartCoroutine(Waiting(time)); ... */" />
+            <marker date="1573655178000" expanded="true" signature="82087:82324" ph="/* StartCoroutine(Waiting(time)); ... */" />
+            <marker date="1573655178000" expanded="true" signature="82574:82742" ph="/* frame0EEG.SetActive(true); ... */" />
+            <marker date="1573655178000" expanded="true" signature="82993:83198" ph="/* frame0EEG.SetActive(true); ... */" />
+            <marker date="1573655178000" expanded="true" signature="83256:83336" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="83367:83491" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="83521:83614" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="83644:83737" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="83765:84045" ph="{...}" />
+            <marker date="1573655178000" expanded="true" signature="83769:83874" ph="/* define_Quadro1 (); ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/CustomTrees/Nildo/tree1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
